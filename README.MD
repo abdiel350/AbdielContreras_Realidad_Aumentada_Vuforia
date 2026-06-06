@@ -69,6 +69,40 @@ Sincronización de Múltiples Agentes: El sistema permite que dos o más persona
 
 Materiales Personalizados: Creación y asignación de materiales con texturas de piedra optimizadas para el renderizado móvil.
 
+#  NOTA IMPORTANTE PARA LA EVALUACIÓN (Configuración de Vuforia)
+
+Para que el proyecto se ejecute correctamente en el entorno de evaluación, es necesario realizar dos pequeños pasos de configuración inicial tras clonar el repositorio, debido a cómo Unity gestiona las dependencias locales y las licencias de Vuforia:
+
+### 1. Cargar la Escena de Realidad Aumentada
+Las escenas no siempre se añaden de forma automática al orden de compilación tras la importación. Para arrancar el proyecto:
+1. En la pestaña **Project**, navegue a la carpeta `Assets > Scenes`
+2. Haga doble clic en la escena principal: (SampleScene)
+3. Asegúrese de que está añadida en el menú **File > Build Settings** dentro del apartado *Scenes in Build*. Si no es así, arrástrela a dicha sección para que sea la escena principal de arranque (Index 0).
+
+# 2. Configuración de Cámara y Licencia (Vuforia Engine)
+
+Al importar este proyecto en un nuevo equipo o entorno de desarrollo, es posible que los scripts pierdan sus referencias o que la licencia de desarrollo deba ser re-verificada. Si al iniciar el Play Mode la pantalla permanece negra o se producen errores de vinculación, siga estos pasos:
+A. Resolución de errores "Missing Mono Script"
+
+Si en el Inspector de la ARCamera observa advertencias amarillas de "Missing (Mono Script)", significa que el SDK de Vuforia no se ha vinculado correctamente durante la importación.
+
+    Descargue el instalador oficial: Vuforia Engine SDK para Unity.(https://developer.vuforia.com/downloads/sdk)
+
+    Seleccione la versión: "Vuforia Engine 11.4 Download for Unity" (add-vuforia-package-11-4-4.unitypackage).
+
+    Con su proyecto abierto, ejecute el archivo descargado e impórtelo para restaurar las referencias de los scripts.
+
+B. Activación de la Licencia de Desarrollo
+
+Para que las funciones de Realidad Aumentada se activen, verifique la clave de la aplicación:
+
+    En la Jerarquía de la escena, seleccione el objeto ARCamera.
+
+    En el panel Inspector, haga clic en el botón Open Vuforia Configuration (también accesible desde el menú superior: Window > Vuforia Configuration).
+
+    En el campo App License Key, asegúrese de que esté pegada una clave de desarrollo activa obtenida desde el portal de Vuforia.
+
+
 # 6. Conclusión
 
 La práctica ha permitido profundizar en la importancia de las escalas en Realidad Aumentada y en la gestión de dependencias dentro de Unity. La integración de NavMesh sobre objetos rastreados demuestra que es posible crear entornos interactivos y dinámicos que responden al mundo físico con precisión.
