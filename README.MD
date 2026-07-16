@@ -72,3 +72,9 @@ Materiales Personalizados: Creación y asignación de materiales con texturas de
 # 6. Conclusión
 
 La práctica ha permitido profundizar en la importancia de las escalas en Realidad Aumentada y en la gestión de dependencias dentro de Unity. La integración de NavMesh sobre objetos rastreados demuestra que es posible crear entornos interactivos y dinámicos que responden al mundo físico con precisión.
+
+video demostrativo: 
+https://mega.nz/file/HQMFABYB#oSCefLestRhpL0k9zHghwGjzx_JyHJJC3d9nrJj07Sk
+
+Adjunto el código completo por si fuera de utilidad para la revisión o si necesitara verificar algún aspecto adicional. Aunque no se solicita expresamente, he preferido incluirlo como referencia: 
+https://mega.nz/folder/uQcGzIpR#H4F_KT3Ifgr54YiOYDOphg
